@@ -1,21 +1,19 @@
-#Install and build list 
-*recovered Fedora Workstation system*
+# **Install and build list**
+*recovered Fedora Workstation system
+List compiled for Meat Version 4 rebuild*
 
-##List compiled for Meat Version 4 rebuild
 
-
-##System general
-------------------------------
+## System General
+---
 
 - nerdfonts
    gh repo clone ryanoasis/nerd-fonts
 - eza
 
 
-
-##Core VIM/Neovim
-Install with dnf
-------------------------------
+## Core VIM/Neovim
+---
+*Install with dnf*
 
 P1
 neovim.x86_64
@@ -62,13 +60,14 @@ vim-syntastic-xslt.noarch
 vim-syntastic-yaml.noarch
 
 
-# Bash shell
-------------------------------
+## Bash shell
+---
 
 powerline-go.x86_64
 
-# Ai
-------------------------------
+## Ai
+---
+
 https://github.com/TheR1D/shell_gpt.git
 https://github.com/szczyglis-dev/py-gpt.git
 
@@ -83,5 +82,5 @@ git clone https://github.com/github/copilot.vim \
    ~/.config/nvim/pack/github/start/copilot.vim
 
 in vim and neovim do in each:
-:Copilot setup
-:Copilot enable
+::Copilot setup
+::Copilot enable
