@@ -1,30 +1,36 @@
-### Install and build list -- recovered Fedora Workstation system
+#Install and build list 
+*recovered Fedora Workstation system*
 
-## List compiled for Meat Version 4 rebuild
+##List compiled for Meat Version 4 rebuild
 
 
-# System general
+##System general
 ------------------------------
 
-nerdfonts
-    gh repo clone ryanoasis/nerd-fonts
-eza
+- nerdfonts
+   gh repo clone ryanoasis/nerd-fonts
+- eza
 
 
 
-# Core VIM/Neovim
+##Core VIM/Neovim
 Install with dnf
 ------------------------------
 
+P1
 neovim.x86_64
 vim-pathogen.noarch
 vim-airline.noarch
+
 awesome-vim-colorschemes.noarch
 vim-devicons.noarch
 vim-nerdtree.noarch
 vim-gitgutter.noarch
 ShellCheck.x86_64
 vim-syntastic.noarch
+ 
+ 
+ 
  
 vim-syntastic-asciidoc.noarch
 vim-syntastic-c.noarch
