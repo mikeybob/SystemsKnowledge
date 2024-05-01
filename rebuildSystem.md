@@ -2,6 +2,20 @@
 *recovered Fedora Workstation system
 List compiled for Meat Version 4 rebuild*
 
+# File Format
+One package per line
+
+'''
+package1
+package2
+package3
+EOF
+'''
+
+Command to execute:
+'''
+dnf install $(cat packages.txt)
+'''
 
 ## System General
 ---
@@ -9,6 +23,21 @@ List compiled for Meat Version 4 rebuild*
 - nerdfonts
    gh repo clone ryanoasis/nerd-fonts
 - eza
+bat
+kleopatra
+pcsc-lite
+pcsc-lite-acsccid
+pcsc-tools
+ykclient.x86_64
+ykpers.x86_64
+ykocli.noarch
+yubibomb.x86_64
+yubikey-personalization-gui.x86_64
+yubikey-manager.noarch
+pam_yubico.x86_64
+yubico-piv-tool.x86_64
+
+
 
 
 ## Core VIM/Neovim
@@ -26,10 +55,10 @@ vim-nerdtree.noarch
 vim-gitgutter.noarch
 ShellCheck.x86_64
 vim-syntastic.noarch
- 
- 
- 
- 
+
+
+
+
 vim-syntastic-asciidoc.noarch
 vim-syntastic-c.noarch
 vim-syntastic-cpp.noarch
