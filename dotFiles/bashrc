@@ -1,0 +1,71 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+if [ -d ~/.bashrc.d ]; then
+    for rc in ~/.bashrc.d/*; do
+        if [ -f "$rc" ]; then
+            . "$rc"
+        fi
+    done
+fi
+unset rc
+
+test -e "$HOME/.shellfishrc" && source "$HOME/.shellfishrc"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# Shell-GPT integration BASH v0.2
+_sgpt_bash() {
+if [[ -n "$READLINE_LINE" ]]; then
+    READLINE_LINE=$(sgpt --shell <<< "$READLINE_LINE" --no-interaction)
+    READLINE_POINT=${#READLINE_LINE}
+fi
+}
+bind -x '"\C-l": _sgpt_bash'
+# Shell-GPT integration BASH v0.2
+#
+
+INTERACTIVE_BASHPID_TIMER="/tmp/${USER}.START.$$"
+
+PS0='$(echo $SECONDS > "$INTERACTIVE_BASHPID_TIMER")'
+
+function _update_ps1() {
+  local __ERRCODE=$?
+  export PLGO_HOSTNAMEFG=0    # black
+  export PLGO_HOSTNAMEBG=208  # yellow
+  local __DURATION=0
+  if [ -e $INTERACTIVE_BASHPID_TIMER ]; then
+    local __END=$SECONDS
+    local __START=$(cat "$INTERACTIVE_BASHPID_TIMER")
+    __DURATION="$(($__END - ${__START:-__END}))"
+    rm -f "$INTERACTIVE_BASHPID_TIMER"
+  fi
+    
+  #PS1="$($GOPATH/bin/powerline-go -error $? -jobs $(jobs -p | wc -l))"
+  PS1="$($GOPATH/bin/powerline-go \
+          -shell bash \
+	  -mode compatible \
+	  -colorize-hostname \
+	  -error "$__ERRCODE" \
+	  -duration "$__DURATION" \
+	  -modules "host,venv,user,cwd,git,ssh,jobs,perms,exit,newline,time,root")"
+ }
+	  # -modules-right "perms,root" \
+	   
+if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
+  PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
