@@ -1,0 +1,197 @@
+#! /bin/bash
+# ##
+#
+#
+alias nflogo='clear; neofetch --ascii_distro kubuntu'
+#
+#
+fastfetch
+alias weath='"ansiweather -l edinburgh -a true -s true -d true"'
+alias ncardw='pcsc_ndef -r ACS -t2 write'
+alias ncardr='pcsc_ndef -r ACS -t2 read'
+alias ncardr4='pcsc_ndef -r ACS -t4 read'
+alias ncardmax='pcsc_ndef -r ACS -t2 getmax'
+alias ncardexe='echo Card execute not ready yet.'
+alias jellyup='sudo systemctl start jellyfin.service && jfstat'
+alias jellydown='sudo systemctl stop jellyfin.service && jfstat'
+alias jellystat='sudo systemctl status jellyfin.service && jfstat'
+alias quickpass='diceware -n 3 -d -'
+alias jellydfix=' '  # owner:mike,group:jellyfin, permissions: [rw- rw- r--] RECURSIVLY
+alias badjellyfile='find . -type f ! -user mike ! -group jellyfin 2>/dev/null'
+# alias ybv='./yotp $1' # FUNCTION THIS
+# ##
+#
+#
+alias vsnazzy='export LS_COLORS="$(vivid generate snazzy)"'
+alias vjbeans='export LS_COLORS="$(vivid generate jellybeans)"'
+alias vayu='export LS_COLORS="$(vivid generate ayu)"'
+alias vlava='export LS_COLORS="$(vivid generate lava)"'
+alias v1dark='export LS_COLORS="$(vivid generate one-dark)"'
+alias viceberg='export LS_COLORS="$(vivid generate iceberg-dark)"'
+#
+alias btpbind='sudo rfcomm bind /dev/rfcomm1 0F:02:17:42:53:E3 1'
+alias btpbindb='sudo rfcomm bind /dev/rfcomm0 86:67:7A:7D:84:FA 1'
+#
+alias btprel='sudo rfcomm release /dev/rfcomm0'
+alias btpfont='echo -e "\x1B\x4D\x31" > /dev/rfcomm0'
+alias btpinit='echo -e "\x1B\x40" > /dev/rfcomm0'
+
+alias btprel1='sudo rfcomm release /dev/rfcomm1'
+alias btpfont1='echo -e "\x1B\x4D\x31" > /dev/rfcomm1'
+alias btpinit1='echo -e "\x1B\x40" > /dev/rfcomm1'
+#
+alias tasks='task'
+alias dfclean='df -hTl -x squashfs'
+alias gist='gist -c'
+alias lsr='bash -c ls -ltr'
+alias chatgpt='cd ~/shellgpt/;source shellgpt/bin/activate'
+alias shellgpt='cd ~/shellgpt/;source shellgpt/bin/activate'
+alias f2bpban='sudo fail2ban-client set postfix banip'
+alias f2bsban='sudo fail2ban-client set sshd banip'
+alias f2bstat='sudo fail2ban-client status'
+alias f2bstatp='sudo fail2ban-client status postfix'
+alias f2bstats='sudo fail2ban-client status sshd'
+alias f2bunban='sudo fail2ban-client unban'
+alias f2b='sudo fail2ban-client'
+
+alias fnsrc='typeset -f "$1"'
+#alias lsr='bash -w  ls --color=auto -ltr'
+#alias lsr='bash -w  ls --color=auto -ltr'
+alias lsr='bash -c ls --color=auto -ltr'
+
+
+
+
+function fzhist(){
+    history | fzf $1 
+}
+#
+#
+#
+function ncardx() { 
+    pcsc_ndef -r ACS -t2 read | eval ; 
+}
+ 
+ 
+###############################################################################
+###############################################################################
+################################ Functions ####################################
+###############################################################################
+###############################################################################
+
+
+
+
+# #####################
+# ## uhist             ###########################################################
+# ################################################################################
+# ## 
+# ##
+
+function uhist() { 
+history | grep -i "$1" 
+}
+# ################################################################################
+ 
+ 
+# ###################
+# ## esc/pos hex codes ###########################################################
+# ################################################################################
+# ##
+# ################################################################################
+#
+#  \x1b\x40        #  initialize
+#
+#  \x1b\x45\x01    #  bold on
+#  \x1b\x45\x00    #  bold off
+#
+#  \x1d\x21\x01    #  text height 1-8
+#  \x1d\x21\x00    #  text default 0
+#  \x1d\x21\x10    #  text double height
+#
+#  \x1d\x21\x01    #  txt width
+#  \x1d\x21\x00    #  txt width
+#  \x1d\x21\x20    #  txt double width
+#
+#  \x1d\x4d\x01    #  font small
+#  \x1d\x4d\x00    #  font normal
+#
+#  \x1b\x61\x00    #  txt left
+#  \x1b\x61\x01    #  txt centre
+#  \x1b\x61\x02    #  txt right
+#
+#  \x1d\x21\x01    #  txt width
+#  \x1d\x21\x00    #  txt width
+#
+#  \x1b\x2d\x01    #  txt underline on
+#  \x1b\x2d\x00    #  txt underline off
+#
+#  \x1d\x42\x01    #  invert on
+#  \x1d\x42\x00    #  invert off
+#
+#  \x1b\x34\x01    #  italic on
+#  \x1b\x34\x00    #  italic off
+#
+# #############################################################################
+
+
+# #####################
+# ## Disk space report ##########################################################
+# ###############################################################################
+function btpdfr() {
+export BTPLINE="\n\n\n\x1b\x61\x01\x1d\x21\x01\x1b\x45\x01\x1d\x21\x10\x1d\x21\x20$(date +%A)\x1d\x21\x00\x1b\x45\x00\n";
+export BTPLINE=$BTPLINE"\n\n\n\x1b\x61\x01\x1d\x21\x01\x1b\x45\x01\x1d\x21\x10\x1d\x21\x20DF Report\x1d\x21\x00\x1b\x45\x00\n";
+export BTPLINE=$BTPLINE"\x1d\x21\x10\x1b\x61\x01$(date -I)\n" 
+export BTPLINE=$BTPLINE"\x1d\x21\x10\x1b\x61\x01$(date +%X.%Z)\n";
+echo -e "$BTPLINE > /dev/rfcomm0;" 
+echo -e "\n\n\x1b\x61\x01\x1b\x45\x01\x1d\x21\x01\x1d\x21\x10\x1d\x21\x20--- btrfs ---\x1d\x21\x00\x1b\x45\x00\x1b\x61\x00\n" > /dev/rfcomm0;
+df -h -t btrfs --output=target,pcent,avail,source --total > /dev/rfcomm0;
+echo -e "\n\n\x1b\x61\x01\x1b\x45\x01\x1d\x21\x01\x1d\x21\x10\x1d\x21\x20--- xfs ---\x1d\x21\x00\x1b\x45\x00\x1b\x61\x00\n" > /dev/rfcomm0;
+df -h -t xfs --output=target,pcent,avail,source --total > /dev/rfcomm0;
+echo -e "\x1b\x61\x01\x1d\x21\x10\n\x1b\x2d\x01\x1b\x61\x01$(whoami)@$(hostname)\x1b\x2d\x00\x1b\x61\x00" > /dev/rfcomm0;
+echo -e "\x1b\x61\x01\x1b\x45\x01\x1d\x21\x01\x1d\x21\x10\x1d\x21\x20End of Report\x1d\x21\x00\x1b\x45\x00\x1b\x61\x00\n\n\n" > /dev/rfcomm0;
+}
+# ###############################################################################
+
+ function multiread() {     
+     for i in {1..3};       
+         do echo -e "\n\nREADY: Reading number $i";          
+     eval "$(ncardr)";      
+     sleep 2
+ done; 
+}    
+
+# #####################
+# ## sdump             ###########################################################
+# ################################################################################
+# ## 
+# ##
+# ##
+
+function sdump() {
+  nm=$(diceware -n2 -d -)
+  xclip -o > "clip_$nm.txt"
+  echo "Clipboard saved to clip_$nm.txt"
+  echo -e "$(date)\nClipboard saved to clip_$nm.txt" > /dev/rfcomm1
+xmessage -center -timeout 20 -file "clip_$nm.txt"
+}
+# ################################################################################
+
+# #####################
+# ## logit             ###########################################################
+# ################################################################################
+# ## 
+# ##
+# ##
+
+function logit() {
+    logger -p "local0.notice" -t "MANUALENTRY" "$1";
+    printf "logged-> local0.notice:MANUALENTRY %s", "$1"
+    printf "\n";
+}
+# ################################################################################
+alias ddmngo='npm run serve -- --build --port 3005 --host 0.0.0.0'
+alias weath='ansiweather -l edinburgh -a true -s true -d true'
+alias l='eza'
+alias ll='eza -l'
+weath
