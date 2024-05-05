@@ -1,6 +1,6 @@
 #! /bin/bash
 # ##
-#
+#  meat salvage
 #
 alias nflogo='clear; neofetch --ascii_distro kubuntu'
 #
