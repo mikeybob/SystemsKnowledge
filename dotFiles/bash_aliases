@@ -5,7 +5,7 @@
 alias nflogo='clear; neofetch --ascii_distro kubuntu'
 #
 #
-fastfetch
+# fastfetch
 alias weath='"ansiweather -l edinburgh -a true -s true -d true"'
 alias ncardw='pcsc_ndef -r ACS -t2 write'
 alias ncardr='pcsc_ndef -r ACS -t2 read'
