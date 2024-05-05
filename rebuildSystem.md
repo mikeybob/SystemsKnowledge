@@ -152,3 +152,7 @@ x
 
 ## Nginx webserver 
 x
+
+## Fun and flashy stuff
+x
+fastfetch
