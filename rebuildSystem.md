@@ -13,29 +13,32 @@ One package per line
 x
 
 
-'''bash
+```bash
 package1
 package2
 package3
-'''
+```
 
 Command to execute:
-'''bash
+```bash
 cat << EOF > packages.txt
 package1
 package2
 package3
 EOF
 dnf install $(cat packages.txt)
-'''
+```
 
 ## System General
+```text
 * nerdfonts
+```
+
 ```bash
 gh repo clone ryanoasis/nerd-fonts
 ```
 * eza
-
+```text
 bat
 kleopatra
 pcsc-lite
@@ -49,10 +52,11 @@ yubikey-personalization-gui.x86_64
 yubikey-manager.noarch
 pam_yubico.x86_64
 yubico-piv-tool.x86_64
-
+```
 ___
 
 ### Core Edit: VIM/Neovim
+```text
 * neovim.x86_64
 * vim-pathogen.noarch
 * vim-airline.noarch
@@ -61,39 +65,40 @@ ___
 * vim-nerdtree.noarch
 * vim-gitgutter.noarch
 * ShellCheck.x86_64
-
+```
  ___
 ### Syntastic
-    * vim-syntastic.noarch
-    * vim-syntastic-asciidoc.noarch
-    * vim-syntastic-c.noarch
-    * vim-syntastic-cpp.noarch
-    * vim-syntastic-cs.noarch
-    * vim-syntastic-css.noarch
-    * vim-syntastic-fortran.noarch
-    * vim-syntastic-go.noarch
-    * vim-syntastic-haskell.noarch
-    * vim-syntastic-help.noarch
-    * vim-syntastic-html.noarch
-    * vim-syntastic-java.noarch
-    * vim-syntastic-json.noarch
-    * vim-syntastic-julia.noarch
-    * vim-syntastic-less.noarch
-    * vim-syntastic-lua.noarch
-    * vim-syntastic-matlab.noarch
-    * vim-syntastic-perl.noarch
-    * vim-syntastic-perl6.noarch
-    * vim-syntastic-php.noarch
-    * vim-syntastic-python.noarch
-    * vim-syntastic-qml.noarch
-    * vim-syntastic-ruby.noarch
-    * vim-syntastic-sh.noarch
-    * vim-syntastic-text.noarch
-    * vim-syntastic-xhtml.noarch
-    * vim-syntastic-xml.noarch
-    * vim-syntastic-xslt.noarch
-    * vim-syntastic-yaml.noarch
-
+```text
+* vim-syntastic.noarch
+* vim-syntastic-asciidoc.noarch
+* vim-syntastic-c.noarch
+* vim-syntastic-cpp.noarch
+* vim-syntastic-cs.noarch
+* vim-syntastic-css.noarch
+* vim-syntastic-fortran.noarch
+* vim-syntastic-go.noarch
+* vim-syntastic-haskell.noarch
+* vim-syntastic-help.noarch
+* vim-syntastic-html.noarch
+* vim-syntastic-java.noarch
+* vim-syntastic-json.noarch
+* vim-syntastic-julia.noarch
+* vim-syntastic-less.noarch
+* vim-syntastic-lua.noarch
+* vim-syntastic-matlab.noarch
+* vim-syntastic-perl.noarch
+* vim-syntastic-perl6.noarch
+* vim-syntastic-php.noarch
+* vim-syntastic-python.noarch
+* vim-syntastic-qml.noarch
+* vim-syntastic-ruby.noarch
+* vim-syntastic-sh.noarch
+* vim-syntastic-text.noarch
+* vim-syntastic-xhtml.noarch
+* vim-syntastic-xml.noarch
+* vim-syntastic-xslt.noarch
+* vim-syntastic-yaml.noarch
+```
 
 ## Bash shell
 * powerline-go.x86_64
