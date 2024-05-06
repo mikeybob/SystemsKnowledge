@@ -1,7 +1,7 @@
 # Fedora Workstation Install and Rebuild Checklist and Installation Guide
 *Based on Fedora 39 and Fedora 40 Workstation system recovery exercises April/May 2024. This document is compiled specifically from the Meat Version 4 rebuild.*
 
-Relevant Github repositories
+Relevant GitHub repositories
 - [ ] one
 - [ ] two
 - [ ] three
@@ -34,15 +34,8 @@ dnf install $(cat packages.txt)
 ```bash
 gh repo clone ryanoasis/nerd-fonts
 ```
-Then run the install script.
-
 * eza
-* bat
-- nerdfonts
-   ```bash
-   gh repo clone ryanoasis/nerd-fonts
-   ```
-- eza
+
 bat
 kleopatra
 pcsc-lite
@@ -116,7 +109,7 @@ gh repo clone https://github.com/TheR1D/shell_gpt.git
 
 
 ### GitHub Copilot vim/nvim
-Installing github copilot 
+Installing GitHub copilot 
 
 ```bash
 gh extension install github/gh-copilot
