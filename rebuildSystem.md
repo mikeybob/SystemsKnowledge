@@ -64,35 +64,35 @@ ___
 
  ___
 ### Syntastic
-* vim-syntastic.noarch
-* vim-syntastic-asciidoc.noarch
-* vim-syntastic-c.noarch
-* vim-syntastic-cpp.noarch
-* vim-syntastic-cs.noarch
-* vim-syntastic-css.noarch
-* vim-syntastic-fortran.noarch
-* vim-syntastic-go.noarch
-* vim-syntastic-haskell.noarch
-* vim-syntastic-help.noarch
-* vim-syntastic-html.noarch
-* vim-syntastic-java.noarch
-* vim-syntastic-json.noarch
-* vim-syntastic-julia.noarch
-* vim-syntastic-less.noarch
-* vim-syntastic-lua.noarch
-* vim-syntastic-matlab.noarch
-* vim-syntastic-perl.noarch
-* vim-syntastic-perl6.noarch
-* vim-syntastic-php.noarch
-* vim-syntastic-python.noarch
-* vim-syntastic-qml.noarch
-* vim-syntastic-ruby.noarch
-* vim-syntastic-sh.noarch
-* vim-syntastic-text.noarch
-* vim-syntastic-xhtml.noarch
-* vim-syntastic-xml.noarch
-* vim-syntastic-xslt.noarch
-* vim-syntastic-yaml.noarch
+    * vim-syntastic.noarch
+    * vim-syntastic-asciidoc.noarch
+    * vim-syntastic-c.noarch
+    * vim-syntastic-cpp.noarch
+    * vim-syntastic-cs.noarch
+    * vim-syntastic-css.noarch
+    * vim-syntastic-fortran.noarch
+    * vim-syntastic-go.noarch
+    * vim-syntastic-haskell.noarch
+    * vim-syntastic-help.noarch
+    * vim-syntastic-html.noarch
+    * vim-syntastic-java.noarch
+    * vim-syntastic-json.noarch
+    * vim-syntastic-julia.noarch
+    * vim-syntastic-less.noarch
+    * vim-syntastic-lua.noarch
+    * vim-syntastic-matlab.noarch
+    * vim-syntastic-perl.noarch
+    * vim-syntastic-perl6.noarch
+    * vim-syntastic-php.noarch
+    * vim-syntastic-python.noarch
+    * vim-syntastic-qml.noarch
+    * vim-syntastic-ruby.noarch
+    * vim-syntastic-sh.noarch
+    * vim-syntastic-text.noarch
+    * vim-syntastic-xhtml.noarch
+    * vim-syntastic-xml.noarch
+    * vim-syntastic-xslt.noarch
+    * vim-syntastic-yaml.noarch
 
 
 ## Bash shell
