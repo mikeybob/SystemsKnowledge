@@ -6,7 +6,7 @@ Relevant GitHub repositories
 - [ ] two
 - [ ] three
 - [ ] four
-# File Format
+## File Format
 One package per line
 
 ## Filesystems and Subvolumes
@@ -30,7 +30,7 @@ dnf install $(cat packages.txt)
 '''
 
 ## System General
-* nerdfonts 
+* nerdfonts
 ```bash
 gh repo clone ryanoasis/nerd-fonts
 ```
@@ -52,7 +52,7 @@ yubico-piv-tool.x86_64
 
 ___
 
- ### Core Edit: VIM/Neovim
+### Core Edit: VIM/Neovim
 * neovim.x86_64
 * vim-pathogen.noarch
 * vim-airline.noarch
@@ -63,7 +63,7 @@ ___
 * ShellCheck.x86_64
 
  ___
- ### Syntastic
+### Syntastic
 * vim-syntastic.noarch
 * vim-syntastic-asciidoc.noarch
 * vim-syntastic-c.noarch
@@ -109,7 +109,7 @@ gh repo clone https://github.com/TheR1D/shell_gpt.git
 
 
 ### GitHub Copilot vim/nvim
-Installing GitHub copilot 
+Installing GitHub copilot
 
 ```bash
 gh extension install github/gh-copilot
@@ -125,7 +125,7 @@ gh extension upgrade gh-copilot
  ```bash
  git clone https://github.com/github/copilot.vim ~/.vim/pack/github/start/copilot.vim
 ```
- 
+
  ```bash
  git clone https://github.com/github/copilot.vim ~/. config/nvim/pack/github/start/copilot.vim
 ```
@@ -142,10 +142,10 @@ x
 ## Jellyfin Media System
 x
 
-## Cloudflare Argo Tunnel Reverse Proxy 
+## Cloudflare Argo Tunnel Reverse Proxy
 x
 
-## Nginx webserver 
+## Nginx webserver
 x
 
 ## Fun and flashy stuff
