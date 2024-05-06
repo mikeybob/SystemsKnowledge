@@ -1,0 +1,52 @@
+
+
+
+
+
+" Set the leader key to backslash
+let mapleader = "\\"
+let maplocalleader = "\\"
+
+autocmd BufWritePre * :%s/\s\+$//e
+
+nnoremap <leader>w :%s/\s\+$//e<CR>
+
+" Initialize Pathogen to manage your plugins
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
+" Airline plugin configuration
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'default'
+
+" NERDTree configuration
+" Automatically open NERDTree when Vim starts
+autocmd vimenter * NERDTree
+" Close Vim if NERDTree is the only window left
+autocmd bufenter * if (winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree()) | q | endif
+
+" Syntastic plugin configuration
+let g:syntastic_css_checkers = ['csslint']
+let g:syntastic_html_checkers = ['htmltidy']
+let g:syntastic_sh_checkers = ['shellcheck']
+
+" Shellcheck integration
+let g:syntastic_sh_shellcheck_args = '-x'
+
+" GitGutter plugin configuration
+let g:gitgutter_enabled = 1
+let g:gitgutter_map_keys = 0
+
+" GitHub Copilot (ensure you've installed the copilot.vim plugin)
+if filereadable(expand("~/.vim/bundle/copilot.vim/autoload/copilot.vim"))
+  autocmd FileType * copilot#Enable()
+endif
+
+" Additional plugins suggestions:
+" fzf - A command-line fuzzy finder, integrated within Vim
+" vim-surround - Provides mappings to easily delete, change, and add such surroundings in pairs
+" vim-commentary - Plugin for easy commenting of code blocks
+" vim-fugitive - A Git wrapper so awesome, it should be illegal
+
+" You can install these additional plugins and configure them based on your preferences.
