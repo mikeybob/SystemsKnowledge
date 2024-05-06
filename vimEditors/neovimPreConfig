@@ -1,0 +1,13 @@
+
+
+1. **Create the Neovim configuration directory** (if it doesn't already exist):
+   ```bash
+   mkdir -p ~/.config/nvim
+   ```
+
+2. **Create or edit your `init.vim` file**:
+   ```bash
+   nvim ~/.config/nvim/init.vim
+   ```
+
+   
