@@ -13,14 +13,14 @@ One package per line
 x
 
 
-'''
+'''bash
 package1
 package2
 package3
 '''
 
 Command to execute:
-'''
+'''bash
 cat << EOF > packages.txt
 package1
 package2
@@ -31,7 +31,7 @@ dnf install $(cat packages.txt)
 
 ## System General
 * nerdfonts 
-```
+```bash
 gh repo clone ryanoasis/nerd-fonts
 ```
 Then run the install script.
@@ -39,7 +39,9 @@ Then run the install script.
 * eza
 * bat
 - nerdfonts
+   ```bash
    gh repo clone ryanoasis/nerd-fonts
+   ```
 - eza
 bat
 kleopatra
@@ -108,35 +110,35 @@ ___
 Note about these here.
 
 ### GPT utilities
+```bash
+gh repo clone https://github.com/TheR1D/shell_gpt.git
 ```
-https://github.com/TheR1D/shell_gpt.git
-```
-~~https://github.com/szczyglis-dev/py-gpt.git~~ not until app is stable.
+
 
 ### GitHub Copilot vim/nvim
 Installing github copilot 
 
-```
+```bash
 gh extension install github/gh-copilot
 ```
 
 Upgrading an existing installation
-```
+```bash
 gh extension upgrade gh-copilot
 ```
 
 *~~Note: Pathogen takes care of the vim/nvim extension activation~~*
 
- ```
+ ```bash
  git clone https://github.com/github/copilot.vim ~/.vim/pack/github/start/copilot.vim
 ```
  
- ``` 
+ ```bash
  git clone https://github.com/github/copilot.vim ~/. config/nvim/pack/github/start/copilot.vim
 ```
 
 In vim and neovim do in each:
-```
+```vim
 :Copilot setup
 :Copilot enable
 ```
