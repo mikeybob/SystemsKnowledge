@@ -110,8 +110,8 @@ Note about these here.
 ### GPT utilities
 ```
 https://github.com/TheR1D/shell_gpt.git
-https://github.com/szczyglis-dev/py-gpt.git
 ```
+~~https://github.com/szczyglis-dev/py-gpt.git~~ not until app is stable.
 
 ### GitHub Copilot vim/nvim
 Installing github copilot 
@@ -125,7 +125,7 @@ Upgrading an existing installation
 gh extension upgrade gh-copilot
 ```
 
-* *Note: Pathogen takes care of the vim/nvim extension activation*
+*~~Note: Pathogen takes care of the vim/nvim extension activation~~*
 
  ```
  git clone https://github.com/github/copilot.vim ~/.vim/pack/github/start/copilot.vim
