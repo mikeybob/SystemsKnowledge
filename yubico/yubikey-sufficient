@@ -1,2 +1,2 @@
 #%PAM-1.0
-auth       sufficient     pam_yubico.so id=87187 key=v88UIZxOYb+A7tM4G8EsgArfDA0=
+auth       sufficient     pam_yubico.so mode=challenge-response
