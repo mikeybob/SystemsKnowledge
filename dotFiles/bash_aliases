@@ -1,11 +1,11 @@
 #! /bin/bash
 # ##
-#  meat salvage
+#
 #
 alias nflogo='clear; neofetch --ascii_distro kubuntu'
 #
 #
-# fastfetch
+#fastfetch
 alias weath='"ansiweather -l edinburgh -a true -s true -d true"'
 alias ncardw='pcsc_ndef -r ACS -t2 write'
 alias ncardr='pcsc_ndef -r ACS -t2 read'
@@ -62,15 +62,9 @@ alias lsr='bash -c ls --color=auto -ltr'
 
 
 
-function fzhist(){
-    history | fzf $1 
-}
 #
 #
 #
-function ncardx() { 
-    pcsc_ndef -r ACS -t2 read | eval ; 
-}
  
  
 ###############################################################################
@@ -79,8 +73,14 @@ function ncardx() {
 ###############################################################################
 ###############################################################################
 
+function ncardx() { 
+    pcsc_ndef -r ACS -t2 read | eval ; 
+}
 
 
+function fzhist(){
+    history | fzf $1 
+}
 
 # #####################
 # ## uhist             ###########################################################
@@ -194,4 +194,4 @@ alias ddmngo='npm run serve -- --build --port 3005 --host 0.0.0.0'
 alias weath='ansiweather -l edinburgh -a true -s true -d true'
 alias l='eza'
 alias ll='eza -l'
-weath
+alias lg='eza -lgua --git'
