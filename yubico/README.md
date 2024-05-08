@@ -1,6 +1,9 @@
-# Yubikey PAM configuration for Fedora Linux 40+
+**Yubikey PAM configuration for Fedora Linux 40+**
 
-**Taken from the guide at**
-```http
+
+
+Based on the guide at
+
 https://docs.fedoraproject.org/en-US/quick-docs/using-yubikeys/
-```
+
+---
