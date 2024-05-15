@@ -12,6 +12,7 @@
 
 # **Variables you must update:**
 # Replace `yourdomain.com` with your actual domain name.
+#
  export yourdomain="demonlab.net"
 
 ###############################################################################
@@ -35,25 +36,25 @@
 # **Check if Cockpit is installed**
 # If Cockpit is not installed, the script will exit.
 
- echo "Checking if Cockpit is installed..."
- if ! command -v cockpit &> /dev/null
-   then echo "Cockpit is not installed. Please install Cockpit before running this script."
-     exit
- fi
+#echo "Checking if Cockpit is installed..."
+#if ! command -v cockpit &> /dev/null
+#  then echo "Cockpit is not installed. Please install Cockpit before running this script."
+#    exit
+#fi
 
 # **Check if Let's Encrypt certificates are available**
 # If Let's Encrypt certificates are not available, the script will exit.
 
  echo "Checking if Let's Encrypt certificates are available..."
- if [ ! -d "/etc/letsencrypt/live/$(yourdomain)" ];
-   then echo "Let's Encrypt certificates for $(yourdomain) are not available."
+ if [ ! -d "/etc/letsencrypt/live/$yourdomain" ];
+   then echo "Let's Encrypt certificates for $yourdomain are not available."
      echo "Please obtain Let's Encrypt certificates for your domain before running this script."
     exit
  fi
 
 # ## Everything has passed, begin main script ##
 
-
+ echo "All checks passed. Proceeding with the configuration..."
  echo "Configuring Cockpit to use Let's Encrypt certificates..."
 
 # 1. **Create the Cockpit certificates directory if it doesn't exist:**
@@ -64,13 +65,13 @@
  fi
 
 # 2. **Create symbolic links to the Let's Encrypt certificates:**
-# The `ln -sf` command creates symbolic links and ensures that 
+# The `ln -sf` command creates symbolic links and ensures that
 # if the files already exist, they will be overwritten (`-f` flag).
 # Replace `yourdomain.com` with your actual domain name.
 
  echo "Creating symbolic links to the Let's Encrypt certificates..."
- ln -sf "/etc/letsencrypt/live/$(yourdomain)/fullchain.pem" /etc/cockpit/ws-certs.d/1-my-cert.cert
- ln -sf "/etc/letsencrypt/live/$(yourdomain)/privkey.pem" /etc/cockpit/ws-certs.d/1-my-cert.key
+ ln -sf "/etc/letsencrypt/live/$yourdomain/fullchain.pem" /etc/cockpit/ws-certs.d/1-my-cert.cert
+ ln -sf "/etc/letsencrypt/live/$yourdomain/privkey.pem" /etc/cockpit/ws-certs.d/1-my-cert.key
 
 
 # 3. **Set the correct permissions:**
@@ -82,12 +83,16 @@
 
 # Remove the default self-signed certificates:
 
- echo "Removing the default self-signed certificates..."
- rm ws-certs.d/0-self-signed.cert
- rm ws-certs.d/0-self-signed.key
+ echo "Removing the default self-signed certificates..." # Only if the exist
+ if [ -f /etc/cockpit/ws-certs.d/0-self-signed.cert ];
+   then rm /etc/cockpit/ws-certs.d/0-self-signed.cert
+ fi
+ if [ -f /etc/cockpit/ws-certs.d/0-self-signed.key ];
+   then rm /etc/cockpit/ws-certs.d/0-self-signed.key
+ fi
 
-# 4. **Restart Cockpit:**\n
-# Apply the changes by restarting the Cockpit service.\n\n   ```
+# 4. **Restart Cockpit:**
+# Apply the changes by restarting the Cockpit service.
 
  echo "Restarting Cockpit..."
  systemctl restart cockpit
@@ -95,11 +100,9 @@
 
  echo "After restarting, Cockpit should be using the Let's Encrypt certificates."
  echo "You can verify this by accessing Cockpit through your web browser"
- echo "using https://$(yourdomain):9090 and checking the certificate details."
+ echo "using https://$yourdomain:9090 and checking the certificate details."
 
 
 # After restarting, Cockpit should be using the Let's Encrypt certificates.
 # You can verify this by accessing Cockpit through your web browser
 # using `https://yourdomain.com:9090` and checking the certificate details."
-#
-
