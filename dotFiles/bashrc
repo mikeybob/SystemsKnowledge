@@ -28,6 +28,10 @@ test -e "$HOME/.shellfishrc" && source "$HOME/.shellfishrc"
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
+<<<<<<< HEAD
+export OPENAI_API_KEY=
+=======
+>>>>>>> parent of e43447f (Updated bashrc and init.vim, removed old init.vim)
 # Shell-GPT integration BASH v0.2
 _sgpt_bash() {
 if [[ -n "$READLINE_LINE" ]]; then
