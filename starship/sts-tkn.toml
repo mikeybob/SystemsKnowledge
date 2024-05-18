@@ -96,8 +96,8 @@ pyenv_version_name = true
 
 [status]
 style = 'bg:black'
-symbol = '🔴 '
-#success_symbol = '🟢 SUCCESS'
+symbol = ' 🔴 '
+#success_symbol = ' 🟢 SUCCESS'
 format = '[$symbol$common_meaning$signal_name$maybe_int]($style) '
 map_symbol = true
 disabled = false
