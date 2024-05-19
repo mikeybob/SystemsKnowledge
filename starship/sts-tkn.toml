@@ -1,12 +1,18 @@
+# starship.toml
+# The Starship configuration file
+# arkname="sts-tkn.toml"
+
 format = """
 [░▒▓](#a3aed2)\
 [    ](bg:#a3aed2 bold fg:#090c0c)\
 [](bg:#769ff0 fg:#a3aed2)\
 $directory\
 [](fg:#769ff0)\
+[](fg:#394260)\
 $git_branch\
 $git_status\
 [](fg:#394260)\
+[](fg:#301C2B)\
 $nodejs\
 $rust\
 $golang\
@@ -14,9 +20,12 @@ $php\
 $python\
 $ruby\
 [](fg:#301C2B)\
+[](fg:#1B3020)\
 $time\
-[ ](fg:#1d2230)\
+[](fg:#1B3020)\
+[](fg:#302A1B)\
 $cmd_duration\
+[](fg:#302A1B)\
 $status\
 $sudo\
 $fill\
@@ -50,28 +59,28 @@ format = '[[($all_status$ahead_behind )](bold fg:#769ff0 bg:#394260)]($style)'
 [nodejs]
 symbol = ""
 style = "bg:#212736"
-format = '[[ $symbol ($version) ](bold fg:#769ff0 bg:#212736)]($style)'
+format = '[[ $symbol ($version) ](bold fg:#769ff0 bg:#301C2B)]($style)'
 
 [rust]
 symbol = ""
 style = "bg:#212736"
-format = '[[ $symbol ($version) ](bold fg:#769ff0 bg:#212736)]($style)'
+format = '[[ $symbol ($version) ](bold fg:#769ff0 bg:#301C2B)]($style)'
 
 [golang]
 symbol = ""
 style = "bg:#212736"
-format = '[[ $symbol ($version) ](bold fg:#769ff0 bg:#212736)]($style)'
+format = '[[ $symbol ($version) ](bold fg:#769ff0 bg:#301C2B)]($style)'
 
 [php]
 symbol = ""
 style = "bg:#212736"
-format = '[[ $symbol ($version) ](bold fg:#769ff0 bg:#212736)]($style)'
+format = '[[ $symbol ($version) ](fg:#a0a9cb bg:#301C2B)]($style)'
 
 [time]
 disabled = false
 #time_format = "%R" # Hour:Minute Format
 style = "bg:#1d2230"
-format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
+format = '[[  $time ](fg:#a0a9cb bg:#1B3020)]($style)'
 
 [fill]
 symbol = " "
@@ -85,13 +94,15 @@ disabled = false
 
 [cmd_duration]
 min_time = 1
-format = '[🕰](bold blue)  [$duration](yellow)'
+style = 'bg:#302A1B'
+format = '[[🕰 $duration](fg:#a0a9cb bg:#302A1B)]($style)'
 show_milliseconds = true
 disabled = false
 
 [python]
 style = 'bg:#301C2B'
-symbol = '👾 '
+symbol = '👾'
+format = '[[ $symbol($version) ](fg:#a0a9cb bg:#301C2B)]($style)'
 pyenv_version_name = true
 
 [status]
