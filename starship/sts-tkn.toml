@@ -26,8 +26,12 @@ $time\
 [](fg:#302A1B)\
 $cmd_duration\
 [](fg:#302A1B)\
+[](fg:#302A1B)\
 $status\
+[](fg:#302A1B)\
+[](fg:#302A1B)\
 $sudo\
+[](fg:#302A1B)\
 $fill\
 \n$hostname\
 $character"""
@@ -107,15 +111,15 @@ pyenv_version_name = true
 
 [status]
 style = 'bg:black'
-symbol = ' 🔴 '
-#success_symbol = ' 🟢 SUCCESS'
+symbol = ' ❌ '
+#success_symbol = ' ✔ SUCCESS'
 format = '[$symbol$common_meaning$signal_name$maybe_int]($style) '
 map_symbol = true
 disabled = false
 
 [sudo]
-style = 'bg:#000000 fg:#FFD700'
-#symbol = '👩‍💻 '
+style = 'bg:#302A1B fg:#FFD700'
+symbol = '👩‍💻 '
 format = '[ su$symbol]($style)'
 disabled = false
 

@@ -1,0 +1,110 @@
+Public Key Object; EC  EC_POINT 256 bits
+  EC_POINT:   04410405d50f7ca36b6d1e54f9c9c97dc328c7bafdfc1114c18c44524bfae2b1beb49b75656324233789fad6f183d54046e3348ded18e64fd2a0474cbcd80b6efc4f44
+  EC_PARAMS:  06082a8648ce3d030107 (OID 1.2.840.10045.3.1.7)
+  label:      PIV AUTH pubkey
+  ID:         01
+  Usage:      verify
+  Access:     none
+Certificate Object; type = X.509 cert
+  label:      Certificate for PIV Authentication
+  subject:    DN: CN=Michael Powell
+  serial:     1472DD63DC51AFC46BB42F0029D4F9A38E2BFB46
+  ID:         01
+Certificate Object; type = X.509 cert
+  label:      Certificate for Digital Signature
+  subject:    DN: CN=Michael Powell
+  serial:     33CFC4B737472CD4274AF108B9FCBBF759744249
+  ID:         02
+Public Key Object; EC  EC_POINT 256 bits
+  EC_POINT:   04410466dfe1b1e8610c95dc31aa3b007b00ce347d1c6412b1e777b3339521ebb533ccfe8bae33f7f588fbb36db4f3c24217212589f44132fe2cef4d410e9a3093f4c0
+  EC_PARAMS:  06082a8648ce3d030107 (OID 1.2.840.10045.3.1.7)
+  label:      SIGN pubkey
+  ID:         02
+  Usage:      verify
+  Access:     none
+Public Key Object; EC  EC_POINT 256 bits
+  EC_POINT:   04410480f8ea88dabc431d3cdb7e5874cf6407743126aed865bb241b5da084a9eb1363d6d981d4e3ba0edea41baa5ff3992b5d9e8e4b07fa966e9f71c41786b23e51b2
+  EC_PARAMS:  06082a8648ce3d030107 (OID 1.2.840.10045.3.1.7)
+  label:      KEY MAN pubkey
+  ID:         03
+  Usage:      derive
+  Access:     none
+Certificate Object; type = X.509 cert
+  label:      Certificate for Key Management
+  subject:    DN: CN=Michael Powell
+  serial:     08EEF7525AE79EB063936DD466F20B5DE5417EAA
+  ID:         03
+Profile object 3341144752
+  profile_id:          CKP_PUBLIC_CERTIFICATES_TOKEN (4)
+Private Key Object; EC
+  label:      CARD AUTH key
+  ID:         04
+  Usage:      sign
+  Access:     sensitive, always sensitive, never extractable, local
+Public Key Object; EC  EC_POINT 256 bits
+  EC_POINT:   044104fda27892d4e10fafbe7a80c03189c1cbd88a64dfe65507d4fc1513df2cf8ea7229ffad1b115b741f0a64fec397f58074bb1abdb207749e76fcd3d81e96d5f175
+  EC_PARAMS:  06082a8648ce3d030107 (OID 1.2.840.10045.3.1.7)
+  label:      CARD AUTH pubkey
+  ID:         04
+  Usage:      verify
+  Access:     none
+Certificate Object; type = X.509 cert
+  label:      Certificate for Card Authentication
+  subject:    DN: CN=Michael Powell
+  serial:     19155BE62E0C54EB97BEBC098AF6842EB045E0A2
+  ID:         04
+Data object 3341137664
+  label:          'Card Capability Container'
+  application:    'Card Capability Container'
+  app_id:         2.16.840.1.101.3.7.1.219.0
+  flags:          <empty>
+Data object 3341137760
+  label:          'Card Holder Unique Identifier'
+  application:    'Card Holder Unique Identifier'
+  app_id:         2.16.840.1.101.3.7.2.48.0
+  flags:          <empty>
+Data object 3341137856
+  label:          'Unsigned Card Holder Unique Identifier'
+  application:    'Unsigned Card Holder Unique Identifier'
+  app_id:         2.16.840.1.101.3.7.2.48.2
+  flags:          <empty>
+Data object 3341137952
+  label:          'X.509 Certificate for PIV Authentication'
+  application:    'X.509 Certificate for PIV Authentication'
+  app_id:         2.16.840.1.101.3.7.2.1.1
+  flags:          <empty>
+Data object 3341138336
+  label:          'X.509 Certificate for Digital Signature'
+  application:    'X.509 Certificate for Digital Signature'
+  app_id:         2.16.840.1.101.3.7.2.1.0
+  flags:          <empty>
+Data object 3341138432
+  label:          'X.509 Certificate for Key Management'
+  application:    'X.509 Certificate for Key Management'
+  app_id:         2.16.840.1.101.3.7.2.1.2
+  flags:          <empty>
+Data object 3341138528
+  label:          'X.509 Certificate for Card Authentication'
+  application:    'X.509 Certificate for Card Authentication'
+  app_id:         2.16.840.1.101.3.7.2.5.0
+  flags:          <empty>
+Data object 3341138624
+  label:          'Security Object'
+  application:    'Security Object'
+  app_id:         2.16.840.1.101.3.7.2.144.0
+  flags:          <empty>
+Data object 3341138720
+  label:          'Discovery Object'
+  application:    'Discovery Object'
+  app_id:         2.16.840.1.101.3.7.2.96.80
+  flags:          <empty>
+Data object 3341138912
+  label:          'Biometric Information Templates Group Template'
+  application:    'Biometric Information Templates Group Template'
+  app_id:         2.16.840.1.101.3.7.2.16.22
+  flags:          <empty>
+Data object 3341139008
+  label:          'Secure Messaging Certificate Signer'
+  application:    'Secure Messaging Certificate Signer'
+  app_id:         2.16.840.1.101.3.7.2.16.23
+  flags:          <empty>

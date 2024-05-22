@@ -1,0 +1,10 @@
+Available slots:
+Slot 0 (0x0): ACS ACR1252 CL Reader [ACR1252 Reader PICC] 00 00
+  token label        : Michael Powell
+  token manufacturer : piv_II
+  token model        : PKCS#15 emulated
+  token flags        : login required, rng, token initialized, PIN initialized
+  hardware version   : 0.0
+  firmware version   : 0.0
+  serial num         : a72d9d620966c85e
+  pin min/max        : 4/8
