@@ -11,8 +11,8 @@
 |fsdump2.sh|  |  |  |  |
 |fbtp.sh|btpinit, btpdfr, btpfont|  |  |  |
 |fMultiread.sh |  |  |  |  |
-|f scrub_rpt_enh.sh|  scrubrpt|  receipt.io format|  |  |
-|f scrub_rpt.sh|  scrubrpt|  escpos text format|  |  |
+|fscrub_rpt_enh.sh|  scrubrpt|  receipt.io format|  |  |
+|fscrub_rpt.sh|  scrubrpt|  escpos text format|  |  |
 |f |  |  |  |  |
 |f |  |  |  |  |
 |f |  |  |  |  |
